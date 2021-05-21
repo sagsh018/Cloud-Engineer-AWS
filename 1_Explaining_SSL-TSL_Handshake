@@ -1,0 +1,186 @@
+PKI -- Public Key Infrastructure
+================================
+This is basically set of different protocols, Algo's, Entities, certificates that allows us to perform communications based
+on digital certificates and trust
+So by using those certificates and trusted relations we could
+ - Perform Encryption of data 
+ - Perform Authentication of server you are communicating to.
+ and so on
+There are below mentioned components in PKI infrastructure :
+ - CA ==> Certification authority. The role of CA is to either assign certificate or delegate trust to other entities and
+            those entities are called intermediate CA'server
+ - Intermediate CA ==> Main responsibility of intermediate CA's is to signature of new certificate that are issued for our 
+                        entities. For example : Our Website 
+ - Different Owners of Certificate ==> You can use certificates for different purposes like :
+                                        a) Use Certificate for SSL encryption and secure your website 
+                                        b) Use Certificate to built VPN and send data over secure VPN tunnel 
+Certificates ==> Set of data. Most important information that any certificate store as data is the public key of the Owner
+                    of the certificate 
+Every entitiy in PKI has its own public key and this public key is included in every certificate 
+So the main goal of PKI is that every public key attached with every entity should be trusted by other entitiy, and becomes
+possible only with the help of CA's and Intermediate CA's.
+
+Kindly consider the below diagram in order to relate obove theory about PKI
+
+"2021-05-18-19-49-46.png"
+
+Certificate Overview
+=====================
+It is a digital entity. And in simple terms it is some file with special information. Below are the information that are 
+present in the certificate 
+ - Information about owner : It may be company name, company address, company website and so on. and sometime serial number 
+    of certificate is also included in this section of certificate.
+ - Information about issuer : It include the information about the entity that signs this certificate. Here you will usually 
+    find information about the Certification authority or intermediate CA's.
+ - Signature : These are basically encrypted with private key hash of certificate. So basically this signature will be done
+    by CA's or Intermediate CA's.
+    and when if the cert is signed by CA and we trust that CA that means that we also trust the owner of that cert and this
+    how we can build the chain of trust 
+    Note
+    ====
+    There are some cases where the certificates are signed by the owner of the certificates itself and those are called as
+    self signed certificates. These types of certificates are signed usually by the private key of the owner.
+ - Public Key : This is always the public key of the owner of the certificate and not the issuer of the certificate.
+
+Reference image for certificate
+"2021-05-18-20-05-37.png"
+
+
+Installing OpenSSL
+==================
+We can download the OpenSSL for windows 7 64 bit from following site : "https://slproweb.com/products/Win32OpenSSL.html"
+And then can install it using following Link : https://tecadmin.net/install-openssl-on-windows/
+
+
+Using OpenSSL to generate RSA keys
+====================================
+On terminal: 
+   # openssl genrsa
+   This will generate private key. but with this the key is not encrypted and can be easily compromised.
+   So to overcome this we will encrypt the key using below openssl command by including AES 256 encryption algo
+   # openssl genrsa -aes256
+   Another thing to note here is that we do not need this private to be displayed on our command ine after getting generated
+   so we are going to add another option to our openssl command to send the output of the command to another file named
+   private.pem where pem is extension given to files containing certificates and private keys
+   # openssl genrsa -aes256 -out private.pem
+   Now to create public key as well, we will be using private key and extract the public key from it only
+   # openssl rsa -in private.pem -outform PEM -pubout -out public.pem
+   So now this pubic key we have generated using RSA can be distributed to other parties so they can encrypt the data that
+   is sent to you and only you can decrypt that data using your own private key.
+
+   Note : if we want to mention the length of the key in RSA we can use below command
+   # opessl genrsa 4096
+
+
+How chain of trust is created
+==============================
+
+Please check out the below diagram in order to check how the chain of trust is created between Root CA, Intermediate CA and
+certificate.
+
+"2021-05-19-18-04-53.png"
+
+Also note that for end user certificate signing by the intermediate CA occurs on the intermediate CA server and not on the 
+end user client machine.
+So basically end user creates a CSR (Certificate signing Request) and sent to intermediate CA which signs it with the help of 
+its own private key and send back the user a certificate 
+Same is the case when root CA sign the intermediate CA certificate. So that clearly shows that signing process is completely
+safe.
+
+How chain of certificate is verified at the user end
+=====================================================
+So firstly whenever we search for any url in our web browser, it contact the web server for that site and transfer the end
+user and all intermediate CA certificates to the web browser 
+Then at user's end the verification of the chain of trust starts. 
+   a) firstly the validity of the end user certificate is verified and if it falls between the valid period then it move
+      to next check
+   b) Then the signature of the end user certificate is checked which is signed by intermediate certificate. So in issuer 
+      info of the end user cert, we get the intermediate CA certificate information who signs this, we go there and takes
+      its pubic key and try to decrypt the signature and verify that is signed by intermediate CA only, this is how we 
+      obtain trust on end user certificate.
+   c) Next we do the same steps with intermediate certificate as well, where we verify that it is signed by root CA and root
+      CA certifiates are already present in our OS level and this how we also trust intermediate certificate 
+   d) for root level cert we are already in trust
+So this is how the chain trust is verified at the user's end.
+
+Note :: We can also check online SSL certificate validators by searching online on google as SSL cert verification.
+
+Certificate Chain Scope
+=======================
+Below is the diagram which shows various vertificate scopes that we have
+
+"2021-05-19-18-54-02.png"
+
+
+Introduction to SSL and TSL cryptographic protocols
+===================================================
+So till now we have seen role of PKI and digital certificates. With the help of certificates we can obtain the trust
+between web server and web browsers. But still the data between them is not encrypted and that's where the role of 
+SSL and TLS comes into picture
+
+SSL - Secure Socket Layer
+TLS - Transport Layer Security.
+
+These both are cryptographic protocols.
+
+Note that both SSL and TLS are used to encrypt the data between Web server and web browser over the web in https
+Also certificates does not depend specifically on any one of the protocol. These certificates can be used with both
+SSL and TLS
+
+
+SSL/TLS protocol versions
+=========================
+Below is the screen shot for all SSL and TLS versions. Kindly note that SSL all versions are aready deprecated and
+no more used.
+
+"2021-05-19-20-56-06.png"
+
+"2021-05-19-20-58-31.png"
+
+Note : whenever we are responsible for configuring of a web server to host a site, we configure list of protocol and
+      out of that only ones which are new and actively used are enabled and rest such as : SSL 2 and SSL 3 are 
+      disabled.
+
+
+RSA is not used in HTTPS for Data Encryption
+=============================================
+There are couple of reasons why RSA or any other asymmetric encryption algo's are not used for data encryption in
+HTTPS
+   a) RSA encryption is slow since it depends on key pair generation
+   b) Whenever there is Bi-directional flow of data over the network, we will need the pair of public and private
+      keys on both the end in order to encrypt and decrypt the data.
+So instead, what happens in SSL is that secure TLS session is established and after that data is encrypted using
+symmetric encryption algo and then start transferring
+
+Below is the screen shot for the questions which we will tend to answer in upcoming course
+
+"2021-05-20-14-43-52.png"
+
+
+Establishing TLS session
+=========================
+   a) Negotiation of chiper suits : The Web Browser sends list of cipher suits to web server and web server chooses 
+      one of the cipher suits from that list
+   b) Cipher suits are set of protocols that will be used in TLS communication. for example, each cipher suit will
+      decide how symmetric key for data encryption will be created before transferring it over the network
+      Also each cipher suit will indicate which algorythm will be used for actual data encryption and decryption.
+      and note that this will be symmetric key encryption algo.
+   c) Also Cipher suits information will include information about the hashing protocol.
+   So this is how Cipher suits are negotiated.
+   d) after this Web browser sends its SSL/TLS certificate to Web browser. This will include both the end user 
+      certificate and all intermediate Certificates
+   e) After receiving the certificates the entire chain of trust is verified at user's end using the end user, 
+      intermediate and root certificates.
+   f) Then we will start generating symmetric key using asymmetric key algo for actual data encryption. for example
+      here we make use of Diffie-Hellman Encryption algo.
+   g) Once symmetric key is generated on both the sides of sender and receiver, actual data transfer starts by
+      encrypting it using the same secret key generated using DHE Algo.
+
+   Consider the below Diagram dipicting the same
+
+   "2021-05-20-19-12-55.png"
+
+
+Example of one of the cipher suit that web server has choosen out of the available cipher suits web browser support
+==================================================================================================================
+Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 (0xc02b)

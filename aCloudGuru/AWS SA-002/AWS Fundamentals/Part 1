@@ -1,0 +1,7 @@
+A Region : A physical location in the world that consist of two or more AZs
+
+An Availability Zone : One or more descrete data centers -- each with redundant power, networking and connectivity -- housed
+                        in separate facalities
+                        
+Edge Location : These are the endpoints for AWS that are used for caching content. Typically this consist of Cloudfront,
+                Amazon's CDN.

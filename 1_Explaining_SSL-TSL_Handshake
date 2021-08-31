@@ -8,7 +8,7 @@ So by using those certificates and trusted relations we could
  and so on
 There are below mentioned components in PKI infrastructure :
  - CA ==> Certification authority. The role of CA is to either assign certificate or delegate trust to other entities and
-            those entities are called intermediate CA'server
+            those entities are called intermediate CA's
  - Intermediate CA ==> Main responsibility of intermediate CA's is to signature of new certificate that are issued for our 
                         entities. For example : Our Website 
  - Different Owners of Certificate ==> You can use certificates for different purposes like :
@@ -184,3 +184,65 @@ Establishing TLS session
 Example of one of the cipher suit that web server has choosen out of the available cipher suits web browser support
 ==================================================================================================================
 Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 (0xc02b)
+
+
+
+Delivering keys for Encryption in TLS (without Deiffie Hellman)
+================================================================
+In this case, after server chooses the chiper suit and send over the Certificates and verification of those certificates is 
+done on client/web browser side, Web Browser creates a random key on client side itself and then with the help of public,
+retrived from the CA certificate(Note that this is a public key of the owner of the cerficate), it encrypt that random key and send it over the netowrk to web server and server has private key for the same and it decrypt it and this is how both client and server has same random key for further data encryption
+
+2021-06-05-12-01-54.png
+
+above is the diagram explaining the same
+Note :: In this technique, we can see that same RSA public and private key is used for Certificate authentication and same
+         public key is used for encryption of the secret random key and this public key will remain same untill the certificate will be valid. hence this way of creation of random key and sharing across the network is not secure
+         So RSA should only be used for data authentication and not for encryption of any sensitive information.
+
+
+
+Delivering keys for encryption in TLS (with Diffie Hellman)
+===============================================================
+2021-06-05-12-30-43.png
+
+
+
+Diffie Hellman Key generation
+=============================
+In Diffie Hellman Key exchange algo, same secret key is generated on both sides, i.e. sender and receiver. Note that while 
+generating the key, some packets are transfered between client and server, but actual key is not transfered and Diffie Hellman
+makes sure that these keys cannot be generated anywhere else.
+
+Also note that in DH key exchange algo One way function is used for creation of secret key. And one way function means, that
+even though you know the result, you cannot retrieve the parameters that are used inside of that function.
+
+2021-06-06-13-01-57.png
+
+
+
+How Diffie Hellman perform key exchange
+=========================================
+Below is the diagram that explains the way Diffie Hellman generates the secret key on both the sides and able to generate
+it without exchanging it over the network.
+
+2021-06-06-13-17-30.png
+
+
+
+Elliptic curve Cryptography
+===========================
+Below is a diagram that shows elliptic curve and its equation
+
+2021-06-06-13-23-07.png
+
+Note that using the equation we can build this elliptic curve and it may varries based on two parameters a and b.
+There atre two points that indicate that it is elliptic curve :
+   a) It will always be symmetric relatice to x axis 
+   b) IF we try to draw a line through this curve, it will cut it through atleast 2 points.
+      2021-06-06-13-32-50.png
+
+
+
+
+

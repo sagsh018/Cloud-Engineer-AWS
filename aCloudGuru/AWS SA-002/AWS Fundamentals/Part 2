@@ -1,0 +1,9 @@
+Can you do this yourself in the AWS Management Console ?
+
+=> If yes, you are likely responsible.
+    Security groups, IAM users, patching EC2 operating systems, patching databases running on EC2, etc.
+
+=> If not, AWS is likely responsible.
+    Management of data centers, security cameras, cabling, patching RDS operating systems, etc
+
+=> Encryption is a shared responsibility

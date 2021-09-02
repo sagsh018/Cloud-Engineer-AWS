@@ -1,0 +1,6 @@
+Key services to know for exam :
+
+    Compute : EC2, Lambda, Elastic Beanstalk
+    Storage : S3, EBS, EFS, FSx, Storage Gateway
+    Databases : RDS, DynamoDB, Redshift
+    Networking : VPCs, Direct connect, Route 53, API Gateway, AWS Global Accelarator

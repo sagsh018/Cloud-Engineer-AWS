@@ -16,4 +16,8 @@ Policy Types :
 
     > AWS Managed
     > Customer Managed
-    > AWS MAnaged - job function 
+    > AWS Managed - job function 
+    > Customer Inline
+
+If for some action and resource effect is explicitly defined as deny, then it will override all 
+other allows

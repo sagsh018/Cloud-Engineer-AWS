@@ -1,0 +1,19 @@
+Assign permissions using IAM policy documents consisting of JSON.
+Example policy :
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "*",
+            "Resource": "*"
+        }
+    ]
+}
+
+Policy Types :
+
+    > AWS Managed
+    > Customer Managed
+    > AWS MAnaged - job function 

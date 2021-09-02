@@ -1,0 +1,25 @@
+Whenever we create any user in AWS IAM, by default it does not have any permissions whatsoever in AWS to do anything.
+Identity providers.
+
+What we have learned so far ?
+
+    >> IAM is Universal : It does not apply to regions at this time
+
+    >> The Root Account : This is an account created when you first setup your AWS account and it as complete admin access. Secure it
+                            as soon as possible and do not use it to login for day to day activities
+
+    >> New Users : When created does not have any permissions. Add users to groups and assign permissions to users.
+
+    >> Access key ID and secret access keys are not the same as usernames and passwords
+
+    >> You only get to view them once - If you loose them, you have to regenerate them. So, save them in save location
+
+    >> Always setup password rotations - You can create and customize your own password rotation policies.
+
+    >> IAM Federation - With this you can combine your existing username and password with AWS. For example when you log on to your PC 
+                        (usually using microsoft Active directory), you can use same credentials to log in to AWS if you setup 
+                        federation.
+
+    >> Identity Federation - Uses the SAML standard, which is active directory
+
+

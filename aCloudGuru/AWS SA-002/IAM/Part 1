@@ -1,0 +1,5 @@
+Steps to secure your AWS root account :
+    >> Enable multi-factor authentication on your AWS root account
+    >> Create an admin group for your administrators, and assign appropriate permissions to that group.
+    >> Create user accounts for your administrators
+    >> Add your users to admin group

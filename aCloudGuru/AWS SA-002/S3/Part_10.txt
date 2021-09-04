@@ -1,0 +1,5 @@
+S3 Replication == Cross Region Replication
+
+=> You can replicate objects from one bucket to another and these different buckets can also be in different regions as well.
+=> Objects in existing bucket are not replicated automatically.
+=> Delete markters are not replicated by default.

@@ -1,0 +1,5 @@
+=> Buckets are private by default - When you create a S3 bucket, it is private by default (including all objects within it).
+    you have to allow public access on both the bucket and object in order to make the bucket public.
+=> Object ACLs - You can make individual objects public using objects ACLs
+=> Bucket policies - You can make entire bucket public using bucket policies.
+=> HTTP Status code - When you upload an object to S3 and its successful, you will receive an HTTP 200 code.

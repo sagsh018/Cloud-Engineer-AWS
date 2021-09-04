@@ -1,0 +1,13 @@
+=> Encryption in Transit 
+    > SSL/TLS
+    > https
+=> Encryption at REST : SSE 
+    > Server-side Encryption
+    > SSE-S3 (AES 256-bit)
+    > SSE-KMS
+    > SSE-C 
+=> Client side Encryption
+    > You can encrypt the files yourself before you can upload them to s3
+=> Enforcing Encryption with bucket policy
+    > Abucket policy can deny all PUT requests that don't include the x-amz-server-side-encryption paramter in the request
+        header. 

@@ -1,0 +1,14 @@
+S3 performance optimization
+
+=> mybucketname/folder1/subfolder1/myfile.jpg > /folder/subfolder1 is a prefix
+=> you can also achieve a high number of requests : 3500 PUT/COPY/POST/DELETE and 5500 GET/HEAD requests per second, per
+    prefix.
+=> You can get better performance by spreading your reads across different prefixes. for example, if you are using 2 
+    prefixes, you can achieve 11000 requests per second
+=> If you are using SSE - KMS to encrypt your objects in s3, you must keep in mind the KMS limits
+    > Uploading/downloading will count toward the KMS quota
+    > The quota is region specific, however, its either 5500, 10000 or 30000 requests per second
+    > and currently you cannot request a quota increase for KMS.
+=> Use mulitpart uploads to increase performance when uploading files to s3
+=> should be used for any files over 100 MB and must be used for any file over 5GB.
+=> Use s3 byte-range feteches to increase performance when downloading files to s3 

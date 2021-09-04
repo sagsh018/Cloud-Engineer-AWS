@@ -1,0 +1,5 @@
+=> S3 standard tier is having highest cost.
+=> S3 intelligent Tiering is used for cost optimization for unknown access patterns. So whenever 
+    you are unsure about how frequently you are going to access your data, than in that case 
+    S3 intelligent teiring will be used.
+=> For other storage classes we have retrieval fee. see the diagram 

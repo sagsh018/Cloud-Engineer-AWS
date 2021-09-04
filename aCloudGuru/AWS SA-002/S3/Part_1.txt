@@ -1,0 +1,14 @@
+=> s3 is object based storage - object based storage allows you to upload files.
+=> Not OS or DB Storage - Not suitable to install an operating system or run a database on.
+=> Files up to 5TB - Files can be from 0bytes to 5 5TB
+=> Unlimited Storage - The total volume of data and the number of objects you can store is unlimited.
+=> Files are always stored in Buckets
+=> S3 is a universal namespace.
+=> S3 URL are of the form :
+    https://bucket-name.s3.Region.amazonaws.com/key-name
+    https://acloudguru.s3.us-east-1.amazonaws.com/Ralphie.jpeg
+=> Successful CLI or API uploads will generate an HTTP 200 status code. 
+=> Key - The object name ( e.g : Ralphie.jpg)
+=> Value - The data itself, which is made up of a sequence of bytes
+=> Version ID - Allow you to store multiple versions of same object
+=> Metadata - Data about the data you are storing (e.g., content-type, last-modifued, etc).

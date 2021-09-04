@@ -1,0 +1,9 @@
+=> All Versions : All versions of an object are stored in S3 when versioning is enabled. This includes
+    all writes and even if you delete an object.
+=> Backup : Can be a great backup tool
+=> Cannot be disabled : once enabled versioning on s3 bucket, it cannot be disabled - can be only suspended.
+=> Lifecycle Rules : Can be integrated with lifecycle Rules
+=> Support MFA : Can support multi-factor authentication
+
+So we can say that, by enabling versioning and multi-factor authentication we can avoid accidental delete for our objects 
+in S3.

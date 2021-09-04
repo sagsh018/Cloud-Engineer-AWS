@@ -1,0 +1,5 @@
+=> Lifecycle Management :
+    >> Automates moving objects between different storage classes
+    >> Can be used in conjunction with versioning
+    >> Can be applied to current versions and previous persions
+    >> Can be applied to all objects inside bucket of just few objects.

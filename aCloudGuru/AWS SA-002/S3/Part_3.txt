@@ -1,0 +1,3 @@
+=> Bucket Policies : Make entire bucket public using bucket policies.
+=> Statuc Content : Use s3 to host static content only, such as static website ( not a dynamic such as OS or database)
+=> Automatic Scaling : s3 scales automatically with demand.

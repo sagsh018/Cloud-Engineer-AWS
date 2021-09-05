@@ -1,0 +1,11 @@
+AWS CLI :
+
+=> Least privilege : Always give your users the minimum amount of access required to do their job.
+=> Use Groups : Create IAM groups and assign your users to groups. group permissions are assigned using IAM policy documents.
+    your users will automatically inherit the permissions of the group.
+=> Secret Access Key : You will only see this once. If you lose it, you can delete the access key ID and secret access key 
+    and regenrate them. you will need to run aws configure again.
+=> Don't share the key pair : Each developer should have their own access key ID and secret access key. Just like passwords
+    they should never be shared.
+=> Supports linux, windows, MacOS : You can install the CLI on your MAC, Linux, or Windows PC. You can also use it to on EC2
+    instance.

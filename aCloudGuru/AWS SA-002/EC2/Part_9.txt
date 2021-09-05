@@ -1,0 +1,8 @@
+Spot instances :
+
+=> Spot instances save up to 90% of the cost of the On-demand instances.
+=> Useful of anytype of computing where you don't need persistence Storage
+=> You can blcok spot instances from terminating by using spot blocked
+=> A spot fleet is a collection of spot instances (optionally) On-demand instaces as well.
+
+Need one more look before exam.

@@ -1,0 +1,12 @@
+Security Groups
+
+=> Changes to security group take effect immediately
+=> You can have any number of EC2 isntances within a security group
+=> You can have multiple security groups attached to EC2 instances.
+=> All inbound traffic is blocked by default
+=> All outbound traffic is allowed by default
+
+Bootstrap Scripts / User Data
+
+A bootstrap script is a script that runs when the instance first runs. It passes user data to the EC2 instance and can be
+used to install applications (like web server and detabases), as well as do updates and more.

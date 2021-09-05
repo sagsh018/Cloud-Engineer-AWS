@@ -1,0 +1,13 @@
+Using Roles :
+
+=> The preferred Option:
+    Roles are preferred from security perpective 
+=> Avoid using hard-coding you credentials 
+    Roles allow you to provide access without the use of access key ID and secret access keys.
+=> Policies 
+    Policies control the role's permissions.
+=> Updates 
+    You can update a policy attached to a role, and it will take immediate effect
+=> Attaching and Detaching
+    You can attach and detach roles to running EC2 instance without having to stop or terminate those instances.
+    

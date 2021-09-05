@@ -1,0 +1,16 @@
+3 Types of placement groups
+
+=> Cluster placement groups
+    Low network latency, high network throughput
+=> Spread placement groups
+    Individual critical EC2 instances
+=> Partition placement groups
+    mulitple EC2 instances, HDFS, HBase and Cassandra
+
+=> Cluster placement group can't span multiple Availability Zones, whereas a spread placement group and partition placement group can
+=> Only certain types of instances can be launched in a placement group (compute optimized, GPU optimized, memory optimized, Storage optimized)
+=> AWS recommends homogenous instances wthin cluster placement groups
+=> you can't merge placement groups
+=> you can move an existing instance into a placement group. before you move the instance, the instance must be in stopped state. you can move or remove an 
+    instance using the AWS CLI or an AWS SDK, but you can't do it via the console yet.
+    

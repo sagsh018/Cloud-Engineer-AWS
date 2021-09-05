@@ -1,0 +1,16 @@
+=> EC2 is like a VM , hosted in AWS instead of your own data center.
+=> Select the capacity you need right now
+=> Grow and shrink when you need=> Pay for what you use
+=> Wait minutes, not months
+=> EC2 instance pricing options :
+    > On-demand 
+        Pay by hour or the second, depending on your type of instance you run. Great for flexibility
+    > Reserved 
+        Reserved capacity for 1 or 3 years. upto 72% discount on the hourly charge. Great if you have known, fixed
+        requirement.
+    > Spot
+        Purchase unused capacity at a discount of up to 90%. Prices fluctuate with the supply and demand. Great for
+        applications with flexible start and end times.
+    > Dedicated 
+        A physical EC2 server dedicated for your use. Great if you have server-bound licenses to reuse or compliance
+        requirements.

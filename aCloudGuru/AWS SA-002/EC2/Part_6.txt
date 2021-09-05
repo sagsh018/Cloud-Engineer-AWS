@@ -1,0 +1,11 @@
+For different scenarios on the exam, choose the correct networking device.
+
+=> ENI : For basic networking. Perhaps you need a separate management network from your production network or a separate logging network, and you need to do
+    this at a low cost, In this scenario use multiple ENIs for each network.
+=> Enhanced networking
+    For when you need speeds between 10 GBPS and 100 GBPS. Anywhere you need reliable, high throughput.\
+=> EFA 
+    For when you need to accelerate high performance computing (HPS) and machine learning applications or if you need to do an OS-bypass. if you see a scenario 
+    based question mentioning HPS or ML and asking what network adapter you want, choose EFA
+
+This lecture require one revision before exam.

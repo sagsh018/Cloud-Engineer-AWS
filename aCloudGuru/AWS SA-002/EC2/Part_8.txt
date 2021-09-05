@@ -1,0 +1,5 @@
+Dedicated hosts 
+
+=> Any exam question that talks about special licensing requirements. Then you must go with Dedicated hosts.
+=> An Amazon EC2 dedicated host is a physical server that EC2 instance capacity fully dedicated to your use. Dedicated hosts allow you to use your existing 
+    per=socket, per-core, or per-VM software licenses, including Windows server, Microsoft SQL server and SUSE Linux enterprise server.

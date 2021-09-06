@@ -1,0 +1,50 @@
+Learning EBS:
+
+SSD Volumes (Solid State Disks)
+
+=> Highly available and scalable storage volumes you can attach to an EC2 instance.
+
+Types :
+
+=> General purpose (gp2)
+    > Suitable for boot disks and general applications
+    > Up to 16000 IOPS per volumes
+    > Up to 99.9% durability
+
+=> General purpose SSD (gp3)
+    > Suitable for high performance applications
+    > Predictable 3000 OPS baseline performance and 125 MB/s regardless of the volume size
+    > Up to 99.9% durabiltiy
+
+=> Provisioned IOPS SSD (io1)
+    > Suitable for OLT and latency sensitive applications
+    > 50 IOPS/GB
+    > Up to 64000 IS per volume
+    > High performance and most expensive
+    > Up to 99.9% durability
+
+=> Provisioned IOPS SSD (io2)
+    > Suitable for OLT and latency sensitive applications
+    > 500 IOPS/GB
+    > Upto 64000 IOPS per volume
+    > 99.999 % durability
+    > Latest generation Provisioned IOPS volume.
+
+HDD volumes (Hard Disk Drives)
+
+=> Highly available and scalable storage volumes you can attach to an EC2 instance.
+
+Types :
+
+=> Throughput Optimized (st1)
+    > Suitable for big data, data werehouses, and ETL
+    > Max throughput is 500 MB/s per volume
+    > Cannot be a boot volume
+    > Up to 99/9% durability
+
+=> Cold HDD(sc1)
+    > Max throughput of 250 MB/s per volume
+    > Less frequently accessed data
+    > Cannot be a boot volume
+    > Lowest cost
+    > Up to 99.9% durability

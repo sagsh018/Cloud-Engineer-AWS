@@ -1,0 +1,7 @@
+EBS volumes and snapshot
+
+=> Volums exist on EBS, whereas snapshot exist on s3
+=> Snapshot are point-in-time photographs of volumes and are incremental in nature
+=> The first snapshot will take some time to create. For consistent snapshots, stop the instance and detach the volume.
+=> You can share the snapshot between AWS accounts as well as between regions, but first you need to copy that snapshot to the target region
+=> You can reize the EBS volme on the fly as well as changing the volume types.

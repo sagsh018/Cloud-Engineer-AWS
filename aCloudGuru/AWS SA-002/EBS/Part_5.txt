@@ -1,0 +1,12 @@
+EFS
+
+=> Supports the network file system version 4 (NFSv4) protocol
+=> Only pay for the storage you use (no pre-provisioning required)
+=> Can scale upto petaytes
+=> Can support thousands of concurrent NFS connections
+=> Data is stored across multiple AZa within a region
+=> Read-after-write consistency
+
+Bonus Tip 
+
+=> If you have a scenario based question around highly scalable shared storage using NFS, think of EFS

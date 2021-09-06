@@ -1,0 +1,7 @@
+In exam, you will be given differnet scenarios and asked to choose whether you should use EFS, FSx for windows or FSx for luster
+
+=> EFS : when you need distributed , highly resilient storage for linux instances and linux-based applications
+=> Amazon FSx for windows : When you need centralized storage for windoes-nased applications, such as sharepoint, Microsoft SQL server, Workspaces, IIS web servers
+     or any other native microsoft applications
+=> Amazon FSx for luster : When you need high-speed, high-capacity distributed storage, Ths will be for applications that do high performacne computing (HPC), financial
+    modeling, etc. Remember that FSx for luster can store data directly to S3.

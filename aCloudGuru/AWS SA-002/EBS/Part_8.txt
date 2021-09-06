@@ -1,0 +1,8 @@
+AWS Backup
+
+=> Consolidation : Use AWS Backup to back up the AWS services, such as EC2, EBS, EFS, Amazon FSx for luster, Amazon FSx for windows file server, and AWS Storage 
+    Gateway
+=> Organizations : You can use AWS organizations in conjunction with AWS backup to back up your different AWS services across multiple AWS accounts
+=> Benefits : Backup gives you centralized control, letting you automate your backup and define lifecycle policies for your data. you get better complaince, 
+    as you can enforce your backup policies, ensure your backups are encrypted, and audit them once complete.
+

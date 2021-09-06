@@ -1,0 +1,17 @@
+Storage options use cases
+
+=> S3 : used for serverless object storage
+
+=> Glacier : Used for Archiving objects
+
+=> EFS : Network File system (NFS) for linux instances. Centralized storage solution across multiple AZs
+
+=> FSx for Luster : File storage for high performance computing linux file system
+
+=> EBS volumes : Persistent storage for EC2 instances
+
+=> Instance store : Ephemeral storage for EC2 instances
+
+=> FSx for windows : File storage for windows instances. Centralized Storage solution across multiple AZs
+
+Knowing the different use cases for storage will gain valuable points in the exam.

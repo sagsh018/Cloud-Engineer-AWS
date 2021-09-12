@@ -1,0 +1,4 @@
+Failover Routing Policy
+
+=> Suppose your Route 53 will send the traffic to AP-Souteast-2 because it has detected a failure in EU-West-2. Please see Part_3.1 image
+=> If you get a scenario question where they are talking about active and passive, think of Failover routing.

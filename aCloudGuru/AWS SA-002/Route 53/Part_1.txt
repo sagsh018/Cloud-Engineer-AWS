@@ -1,0 +1,48 @@
+Intro to Route 53
+=================
+
+Top-level-domain
+
+=> If you look at a common domain names (e.g. google.com, bbc.co.uk, and acloud.guru), you will notice a string of characters separated by dots (periods).
+=> The last word in a domain name is known as a second level domain name (this is optional, though, and depends on the domain name).
+
+=> Understand the difference between an alias record and a CNAME record
+=> Given the choice , always choose an alias record over a CNAME record
+
+So the first thing I'd remember going into the exam
+is just understand the difference between an alias
+record and a CNAME.
+And given the choice in a scenario-based question
+always choose an alias record over a CNAME.
+Just remember the alias records are unique to AWS.
+So it's a way of translating your naked domain name
+to a resource.
+Could be an Elastic load balancer, an S3 bucket, et cetera.
+And it doesn't just have to be the naked domain name.
+It could also be a sub domain.
+So it could be mobile.hellocloudguru123.com, et cetera.
+Whereas a CNAME only allows you to translate
+a sub domain names from one to another.
+So M might go M.Acloudguru.com.
+It might go to mobile.Acloudguru.com, et cetera.
+But like I said,
+given the choice always choose an alias record
+over a CNAME When you see mention of it in your exam.
+Also remember going into the exam,
+the common DNS record types.
+So we've got our start of authority record,
+we've got CNAME, we've got our NS records
+or name server records
+and the record that we've been using throughout
+the whole part of this course is our A Records.
+And A Records essentially just turn our web addresses
+in to IP addresses.
+
+Common DNS Record types
+
+    > SOA Records - Start of authority
+    > CNAME record
+    > NS Records - Name Server Records
+    > A Records
+
+This section require extra reading from documentation

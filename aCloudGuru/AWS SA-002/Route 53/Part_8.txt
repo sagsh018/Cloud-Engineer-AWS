@@ -1,0 +1,11 @@
+Weighted Routing policy
+
+Health checks
+    > You can set health checks on individual record Sets 
+    > if a record set fails a health check, it will be removed from a Route 53 until it passes the health check
+    > you can set SNS notificatios to alert you about failed health checks
+
+Exam Tips
+
+    > In this example, Route 53 sent 20% of the traffic to us-east-1 and 80% of the traffic to us-wwest-1. See Part_8.1
+    > If exam question talk about sending certain amount/%age of traffic to specific location then think of weighted routing.

@@ -1,0 +1,12 @@
+Geolocation Routing policy
+
+=> Use case : For example, you might want all queries from Europe to be routed to a fleet of EC2 instances that are specifically configured for your European
+    customers.
+
+=> In this example, Route 53 will send the European customers to eu-west-1 and the US customers to us-east-1. Please see Part_4.1
+
+You may get a scenario based question where, you have users in different part of the world and you need to send them to different regions based on there 
+End locations
+
+So if you see any such question where its talking about location of your users and you need to send them to perticular country for ragulatory may be, 
+ and not talking about latency, then you must choose geolocation routing.

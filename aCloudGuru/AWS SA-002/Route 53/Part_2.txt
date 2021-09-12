@@ -1,0 +1,4 @@
+Simple Routing Policy
+
+=> If you choose the simple routing policy, you can only have one record with multiple IP addresses.
+=> If you specify multiple values in a record, Route 53 return all values to the user in a random order.

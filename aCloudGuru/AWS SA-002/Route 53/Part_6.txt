@@ -1,0 +1,5 @@
+Latency based Routing
+
+=> In this example, Route 53 sent the traffic to eu-west-2 because it has a much lower latency than ap-southeast-2. See Part_6.1
+
+=> You you get scenario based question where latency is given priority then always go with latency based routing.

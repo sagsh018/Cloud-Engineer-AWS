@@ -1,0 +1,15 @@
+RDS Exam Tips
+
+=> RDS Database Types :
+    SQL Server
+    Oracle
+    MySQL
+    PostgreSQL
+    MariaDB
+    Amazon Aurora
+
+=> RDS is for OLTP Workloads
+    Great for processing a lots of small transactions, like customer orders, banking transactions, payments, and booking systems
+
+=> Not suitable for OLAP Workloads
+    Use Redshift for data wherhousing and OLAP tasks, like analysing large amounts of data, reporting, and slaes forecasting

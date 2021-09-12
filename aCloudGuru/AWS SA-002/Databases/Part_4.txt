@@ -1,0 +1,19 @@
+Dynamo database
+
+=> Stored on SSD storage
+
+=> Spread across 3 geographical distinct data center
+
+=> Eventiually consistent reads(default)
+
+=> Strongly consistent reads
+
+Difference between eventually consistent reads and Strongly consistent reads
+
+    => Eventaully :
+        Consistency across all copies of data is usuallly reached within a second. Repeating a read after a short time should return the updated data. Best read 
+        performance
+
+    => Stringly :
+        A strongly consistent read returns a result that reflects all writes that received a successful response prior to read
+        

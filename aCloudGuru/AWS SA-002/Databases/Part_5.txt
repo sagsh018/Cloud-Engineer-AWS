@@ -1,0 +1,13 @@
+DynamoDB Transactions
+
+    => If you see any scenario question that mentions ACID requirements, think DynamoDB Transactions
+    => DynamoDB transactions provide developers atomicity, consistency, isolation and durability
+        (ACID) across 1 or more tables within a single AWS account and region
+    => All-or-nothin transactions
+
+    => Multiple "all-or-nothing" operations
+    => Financial transactions
+    => Fulfilling orders
+    => 3 options for reads: evential consistency, strong consistency, and transactional
+    => 2 options for writes: standard and transactional
+    up to 25 items or 4 MB of data

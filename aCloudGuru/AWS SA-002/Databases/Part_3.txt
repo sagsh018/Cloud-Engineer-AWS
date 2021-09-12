@@ -1,0 +1,11 @@
+Amazon Aroura
+
+=> 2 copies of your data are container in each Availability zone, with minimum of 3 availability zones. 6 copies of your data
+
+=> You can share Aurora snapshots with other AWS accounts
+
+=> 3 types of replicas available : Aurora replicas, MySQL replicas, and PostgreSQL replicas. Automated failover is only available with aurora replicas
+
+=> Aurora has automated backups turned on by default. you can also take snapshots with aurora. you can share these snapshots with other AWS accounts
+
+=> Use Aurora serverless if you want a simple cost effective option for infrequent , intermittent, or unpredictable workloads

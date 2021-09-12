@@ -1,0 +1,20 @@
+Streams : DynamoDB
+
+=>  Lifo streams
+=> Data inserted and divided into shards
+=> Time-rodered sequence of item-level changes in dynamodb table are inserted into dynamodb streams
+=> Stored for 24 hours
+=> Inserted, updated and deletes
+=> combine with lambda function for functionality like stored procedures
+
+Managed Multi-master, multi-region replication
+
+=> Globally distributed applications
+
+=> Based n DynamoDB streams
+
+=> Multi-region redundancy for disaster recovery or high availability
+
+=> No application rewrites
+
+=> Replication latency under 1 second

@@ -1,0 +1,19 @@
+NAT gateways
+
+=> Redundant inside the availability zone
+=> Starts at 5 GBPS and scales currently up to 45 GBPS
+=> No need to patch them, amazon handles this for your.
+=> Not associated with security groups
+=> Automatically assigned a public IP address
+=> NAT gateways are nothing but group of EC2 instances that Amazon handles for you behind the scene.
+=> They are kept inside a public subnet. 
+
+Important 
+
+High Availability with NAT gateways
+====================================
+
+=> if you have resources in multiple availability zones and they share the NAT gateway, in the event the NAT gateway's availability zone is down, resources
+    in the other availability zones lose internet access.
+=> To create an availability zone-independent architecture, create a NAT gateway in each availability zone and configure your routing to ensure resources Use
+    the NAT gateway in the same AZ.

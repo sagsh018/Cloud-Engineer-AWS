@@ -1,0 +1,14 @@
+Transit Gateway facts
+
+=> Allows you to have transitive peering between thousands of VPCs and on-premises data centers
+=> Works on hub-and-spoke model
+=> Works on a regional basis, but you can have it across multiple regions
+=> You can use it across multiple AWS accounts using RAM (Resource Access Manager)
+
+Exam tips :
+
+=> you can sue route tables to limit how VPCs talk to one another
+=> works with direct connect as well as VPC connections
+=> support IP multicast (not supported by any other AWS service)
+
+If you see any any transit word in question or any scenario based question where it ask to simplify the network topology then you can think of using Transit Gateway

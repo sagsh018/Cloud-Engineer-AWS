@@ -1,0 +1,17 @@
+What can we do with a VPC?
+
+    => Launch instances : Launch instances into a subnet of your choosing
+    => Custom IP Addresses : Assign custom IP address ranges in each subnet
+    => Route Tables : Configure route tables between subnets
+    => Internet Gateway : Create internet gateway and attach it to your VPC
+    => More Control : Much better security control over your AWS resources
+    => Access Control Lists : Subnet network access control Lists
+
+Bonus Exam Tip : You can use Network Access control list (NACLs) to block specific IP addresses.
+
+Other exam tipes :
+
+=>  Think of VPC as a logical data center in AWS
+=> Consists of internet gateways (or virtual private gateways). routing tables, network access control lists, subnets, and security 
+    groups
+=> 1 subnet is always in 1 availability zone

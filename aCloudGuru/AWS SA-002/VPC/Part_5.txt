@@ -1,0 +1,5 @@
+VPC Endpoints 
+
+=> Use Case : When you want to connect AWS services without leaving Amazon internal network
+=> 2 types of VPC Endpoints : Interface end[oints and gateway Endpoints
+=> Gateway Endpoints : Support S3 and DynamoDB

@@ -1,0 +1,10 @@
+Security groups are stateful
+
+=> If you send a request from your instance, the response traffic for that request is allowed to flow in regardless of inbound 
+    security group rules
+=> Responses to allowed inbound traffic are allowed to flow out, regardless of the outbound rules.
+=> Security groups are your last line of defence
+
+basically this is how traffic flows in from wither internet Gateway or private VPC Gateway
+
+    => First traffic hits routing table, then it hit Network ACL(NACL) and then finally it hit Security groups.

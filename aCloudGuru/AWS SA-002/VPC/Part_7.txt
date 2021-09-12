@@ -1,0 +1,9 @@
+VPC peering
+
+=> Allows you to connect 1 VPC with another via a direct network route using private IP addresses.
+=> Instances behave as if they were on the same private network
+=> You can peer VPCs with other AWS accounts as well as with other VPCs in the same account
+=> Peering is in a star configuration (e.g. 1 central VPC peers with 4 others)
+=> Transitive peering is not supported. This must be always be in a hub-and-spoke model. see part_7.1
+=> You can peer between regions
+=> No overlapping CIDR address ranges

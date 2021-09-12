@@ -1,0 +1,20 @@
+Direct Connect :
+
+=> Direct connect directly connects your data center to AWS
+=> Useful for high-throughput workloads (e.g. lots of network traffic)
+=> Helpful when you need a stable and relieable secure connection
+
+VPNs vs Direct Connect :
+VPNs allow private communication, but it still traverses the public internet to get the data delivered. While secure , it can be painfully slow
+
+Direct connect is :
+    Fast
+    secure
+    relieable
+    Able to take massive throughput
+
+So whenever you get a question where it says that :
+    Your VPN keeps droping out 
+    you need to reduce your network cost
+    You need to increase your network throughput
+You can think of Direct connect.

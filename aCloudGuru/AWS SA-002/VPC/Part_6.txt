@@ -1,0 +1,5 @@
+AWS PrivateLink
+
+=> If you see a question asking about peering VPCs to tens, hundreds, or thousands of customer VPCs, think of AWS PrivateLink
+=> Doesn't require VPC peering, no route tables, NAT gateways, internet gateways, etc 
+=> Requires a Network Load Balancer on the service VPC and an ENI on the customer VPC. 

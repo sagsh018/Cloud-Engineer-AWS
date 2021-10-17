@@ -1,0 +1,17 @@
+Auto Scaling Groups
+
+=> Auto Scaling and High availability goes hand in hand
+=> We want to be ensured that we are creating auto scaling group across multiple Availbility zone, so that we can have redundancy
+=> Anytime you see exam question where you see EC2 instance, you should think, would this benefit being inside autoscaling group.
+
+=> Therefore always remember that, auto scaling is vital to creating a highly available application.
+
+=> Remember to select answer that spread resources out over multiple availability zones and utilize load balancers.
+
+Some more tips regarding Auto scaling group
+
+=> Networking : Auto scaling group will contain the location of where your instances will live
+=> Remember ELB : It's vital to select a load balancer for the instances to live behind
+=> Limits : Min, Max, and desired are the 3 most important settings
+=> Notifications : SNS can act as a notification tool
+=> Balancing : Autoscaling will balance your EC2 instances across the avialbility zones.

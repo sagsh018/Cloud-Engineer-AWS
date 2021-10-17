@@ -1,0 +1,14 @@
+Visualizing Data with Quicksight
+
+Exam Tips :
+
+    > If you're given a scenario on the exam that talks about sharing your data, interpreting that data, or anything related to business intelligence, look for an
+        answer that includes Quicksight
+
+Some more exam Tips :
+
+> Visualize : Need to look at your data ? : use Quicksight to do it.
+
+> Business Intelligence : If this phrase comes up. start looking for Quicksight
+
+> Overview : knowing the 3000 - foot view of this service is good enough for the exam.

@@ -1,0 +1,10 @@
+Elastic Load Balancers
+
+Types ::
+    > Application Load Balancers :: More intellegent, Layer 7
+    > Network Load balancer :: High performance, Very low latency, layer 4
+    > Classic Load balancer :: Relatively older and used by developers for Dev and Test purposes. operates for both layer 4 and 7
+
+Health checks
+
+> You can use health checks to route your traffic to instances or targets that are healthy

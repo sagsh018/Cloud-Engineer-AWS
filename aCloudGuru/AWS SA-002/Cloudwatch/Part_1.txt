@@ -1,0 +1,15 @@
+What tool do we use to monitor ?
+
+=> On the exam, the answer is Cloudwatch
+
+=> whenver you see any question talking about monitoring, you need to think about cloudwatch.
+
+=> Yoou need to know the basic checks that are included out of the box, as well as what you're responsible for bringing to the table.
+
+exam tips ::
+
+=> Go to tool : Anytime monitoring comes up, think cloudwatch
+=> Alarms :: There are no default alarms. Anything you want to hear about must be created
+=> Default vs. Custom :: AWS can't see past the hypervisor level for EC2 instances.
+=> Managed services :: The more managed a service is, the more checks you get out of the box
+=> Standard vs. Detailed :: Standard is 5-minute intervals, whereas, detailed is 1 minute.

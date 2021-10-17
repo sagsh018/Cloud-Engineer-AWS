@@ -1,0 +1,6 @@
+Deregistration Delay / Connection Draining
+
+=> Enable Deregistration delay : Keep existing connections open if the EC2 instance become unhealthy
+
+=> Disable enable deregistration delay : Do this if you want your load balancer to immediately close connections to the instances that are de-registering
+    or have become unhealthy.

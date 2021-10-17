@@ -1,0 +1,34 @@
+Messaging with SQS
+
+=> Simple Queue service is a messaging queue that allows asynchronous processing of work. One resource will write a message to an SQS queue, and then another
+    resource will retrieve that message from SQS.
+
+=> SQS settings :
+    > Delivery Delay : Default is 0; can be set up to 15 min.
+    > Message Size : Messages can be up to 256 KB of text in any format.
+    > Encryption : Messages are encrypted in transit by default, but you can add at-rest.
+    > Message Retention : Default is 4 days; can be set between 1 minute and 14 days
+    > Long vs short : :ong polling isn't the default, but it should be.
+    > Queue Depth : This can be a trigger for autoscaling.
+    > Visibility Timeout : By default is 30 s and can be increased further. Visibility timeout is a time period for which message will be locked by SQS and 
+        will b=not be visible for any other consumer.
+
+=> SQS is important. SQS is going to be featured very heavily on the exam. It's important to be able to explain every single setting we've talking about .
+    know what chaning these settings would do and why you'd make that change.
+
+Exam Tips :
+
+=> What does that Do ? 
+    It's imperative that you know what all the settings do.
+
+=> Troubleshooting 
+    You'll need to pinpoint the issues. most of the times, these troubleshooting can be donw by figuring out these settings.
+
+=> Size 
+    Messages are 256 KB of text in any format
+
+=> Nothing lasts forever 
+    Messages can only live up to 14 days max.
+
+=> polling  
+    It's important to know the difference between long and short polling.

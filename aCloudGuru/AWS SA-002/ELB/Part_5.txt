@@ -1,0 +1,19 @@
+Sticky Session
+===============
+
+=> You can have sticky session used along with Classic load balancers. but with this sometime there is a problem. Suppose if the EC2 instance is terminated, due
+    to this sticky session it will keep on sending the request to same EC2 instance and user might get time out as the EC2 instance is no more there.
+
+=> To overcome this we need to disable stcikyness.
+
+=> You can also enable sticky sessions for application load balancers as well. but the traffic will be sent at the target group level. that means, if one of the
+    EC2 instance in that target group get fails, the request will be routed to other EC2 instance in taht target group. So not a problem as it is there in
+    Classic load balancers.
+
+Exam Tips
+
+=> Sticky sessions :: Enable your users to stick to the same EC2 instance. Can be useful if you are storing information locally to that instance.
+
+=> You may see a scenario-based question where you remove an EC2 instance from a pool. but the load balancer continues to direct traffic to that EC2 instance.
+
+=> To solve a scenario like this, disable sticky sessions.

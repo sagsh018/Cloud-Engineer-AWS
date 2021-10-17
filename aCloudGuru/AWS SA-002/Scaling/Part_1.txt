@@ -1,0 +1,18 @@
+The 3 W's of scaling
+
+=> What : What do we scale ? for example EC2
+    We have to decide what sort of resource we're going to scale. How do we define the template?
+
+=> Where : Where do we scale ? For example inside these specific subnets
+    When applying the model, where does it go ? Should we scale out database ? or Webservers?
+
+=> When : When do we scale ? Who is going to let me know when to scale. 
+    How do we know we need more ? Cloudwatch alarm can tell us it's time to add more resource.
+
+Exam Tip :
+
+Whenever you see question talking about scaling, keep these 3 W's in mind
+
+    > what do we scale?
+    > where do we scale?
+    > When do we scale?

@@ -1,0 +1,13 @@
+Ordered Messages with SQS FIFO
+
+=> Fifo is the only option : If you ever see a scenario talking about message ordering, scan for answers that include FIFO.
+
+=> While there are other ways to enforce message ordering, FIFO is the only way it would come up on the exam.
+
+Some more exam Tips:
+
+=> Performance : FIFO queues do not have the same level of Performance
+=> Not the only way : You can order the messages with SQS standard as well, but the ordering in this case will on you.
+=> Message Group ID : This ensures messages are processed one by one inside the group. So the group may come out of order but the messages inside a group
+    will always be in order.
+=> FIFO cost more : Fifo costs more since AWS must specnd compute power to deduplicate messages.

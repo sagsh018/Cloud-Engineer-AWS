@@ -1,0 +1,31 @@
+API Gateway
+
+Notable Features :
+
+=> Security : This service allows you to easily protect your endpoints by attaching a web application firewall (WAF)
+
+=> Stop abuse : users can easily implement DDoS protection and rate limiting to curb abuse of their endpoints.
+
+=> Ease of Use :
+
+API Gateway is a simple to get started with. Easily build  out calls that will kinck off other AWS services in your account.
+
+Exam Tips :
+
+=> APIs are the front door
+
+=> API Gateway is a secure and safe front door for your applications
+
+=> It is the preferred method to get API calls into your application and AWS environment
+
+=> You should favor answers that include API Gateway over those that hardcode access and secret keys.
+
+Some more Exam Tips ::
+
+=> API : Anytime the exam talks about creating or managing an API, think API Gateway
+
+=> DDoS : you can front API Gateway with a web application firewall (WAF)
+
+=> Versioning : API Gateway supports versioning of your API
+
+=> No baking : Using API Gateway stops you from baking credentials into your code.

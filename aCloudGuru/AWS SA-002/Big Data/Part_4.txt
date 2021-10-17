@@ -1,0 +1,18 @@
+Amazon Athena and AWS Glue
+
+Exam Tips ::
+
+    >> Serverless SQL : If you'ev ever faced with a scenario that's looking for a serverless SQL solution, Athena is your best choice. Its the only service that
+        allows you to directly query  your data that's stroed in S3.
+
+    >> This data can be from BI application or it cal also be logs data stored in S3
+
+    >> This is a common big data scenario on the exam.
+
+Some more exam tips :
+
+> Both Athena and Glue are serverless solutions
+
+> Knowing the 3000-foot view of these services is good enough for exam
+
+> While Athena can work by itself, Glue can design a schema for your data.

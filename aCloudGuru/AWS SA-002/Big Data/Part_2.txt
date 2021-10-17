@@ -1,0 +1,29 @@
+Processing data with EMR (Elastic Map Reduce)
+
+=> EMR is a managed big data platform that allows you to process vast amounts of data using open-source
+    tools such as Spark, Hive, Hbasem Flink, Hudi, and Presto
+
+=> It is a AWS's ETL tool.
+
+Exam Tips :
+
+=> It's an Open source Cluster.
+
+=> EMR is a managed fleet of EC2 instances running open-source tools.
+
+=> It's similar to the other open-source managed architecture in that it gets the fleet up and running quickly, ubut technology
+    isn't proprietary to AWS.
+
+Some more exam tips :
+
+=> EC2 Rules apply
+    You can use Reserved Instances and spot instances to reduce your costs
+
+=> VPC
+    The architecture lives inside a VPC
+
+=> High level 
+    Understanding EMR is used to process and move data is enough for the exam.
+
+=> VPC 
+    The architeceture lives inside a VPC.

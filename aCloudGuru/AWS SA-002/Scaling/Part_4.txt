@@ -1,0 +1,14 @@
+Auto Scaling Policies 
+
+=> It costs how much ?
+    You will need a good understanding of how much auto scaling handles minimum. maximum, and desired capacityfor the exam.
+    you will be given scenarios where you wull need to know the cost implications and reasons why you might or migh not want to change one of those numbers.
+
+Few more tips for Auto scaling policies ::
+
+=> Scale out aggressively : Get ahead of the workload
+=> Scale in conservatively : Once the instances are up slowly roll them back when not needed.
+=> Provisioning : Keep an eye on provisioning times. bake those AMIs to minimize it.
+=> Costs : Use EC2 Reserved instances for minimum count of the EC2 instances. you could also use spot instances and then fail back on demand instances if   
+    spot instance market is not available.
+=> Cloudwatch : Your no 1 tool for alerting auto scaling group that you need more of less of something.

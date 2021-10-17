@@ -1,0 +1,21 @@
+Sidelining messages with Deadletter queue
+
+=> DLQs are the best sideline
+
+=> If the scenario laid out mestions problems with the message in SQS, immediately think about DLQ and visibility timeout.
+
+=> It's important to set up a cloudwatch alaerm to monitor queue depth.
+
+More exam Tips
+
+=> Monitor, monitor, monitor
+    Make sure you setup an alarm and alert on queue depth
+
+=> DLQ are just SQS queues that are set to receive the reject messages
+
+=> Same Retention Window as that of normal SQS queue
+    Messages will be held up to 14 days
+
+=> Usable with SNS 
+    You can create SQS DLQ for SNS topic
+

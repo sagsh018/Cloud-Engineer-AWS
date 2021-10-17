@@ -1,0 +1,16 @@
+Scaling Non-Relational Databases 
+================================
+
+Pinch Those Pennies !
+
+=> Keep cost in mind rather than performance when scaling DynamoDB.
+=> The exam will generally approach it from a cost perpective.
+=> Predictive Workload ? : Pick a provisioned capacity
+=> Sporadic ? : Pick on-demand.
+
+Exam Tips :
+
+=> Access Patterns : Know if its predictable or unpredictable
+=> Design Matters : Avoiding hot keys will also lead to better performance
+=> Switching : you can switch, but only once per 24 hours per table
+=> Cost : Keep cost in mind when considering which type of table to pick.

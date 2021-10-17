@@ -1,0 +1,44 @@
+Data Streams and Data Firehose
+
+=> There are 2 major types of Kinesis you need to be familiar with.
+
+=> Data Streams
+    Purpose : Real -time streaming for ingesting data
+
+    Speed : Real time
+
+    Difficulty : you're responsible for creating the consumer and scaling the stream.
+
+=> Data Firehose 
+    Purpose : Data transfer tool to get information to S3, Redshift, Elasticsearch, or splunk
+
+    Speed : Near real time (within 60 seconds)
+
+    Difficulty : Plug and play with AWS architecture 
+
+=> When we're looking for a message broker, which do we pich?
+    SQS : SQS is a messageing broker that is simple to use and doesn't require much configuration. It doesn't offer real-time 
+            message delivery
+
+    Kinesis : Kinesis is a bit more complicated to configure and is mostly used in big data applications. It does provide real-time
+            communication.
+
+
+Exam Tips 
+
+=> Real Time ? Think Kinesis 
+
+=> There are very few services in AWS that offer "real-time" processing. Kinesis is one of the few services that offer this Speed
+    So if you see real-time than go with kinesis streams and if you see near real time streaming then go with kinesis data 
+    Firehose
+
+=> So if you're faced with a question that asks for a real-time processing or streaming of data, look for an answer
+    that includes Kinesis.
+
+Some more tips :
+
+=> Kinesis VS SQS : Both are message brokers, but the only kinesis is real time
+
+=> Scaling : Data streams does not automatically scale. Data firehose does
+
+=> Transforming data : Data analytics is the easiest way to process data going through kinesis using SQL.

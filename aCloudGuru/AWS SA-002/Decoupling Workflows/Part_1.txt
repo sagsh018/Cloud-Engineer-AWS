@@ -1,0 +1,12 @@
+=> Never tightly couple : On the exam, avoid answrs that include tight coupling - such as an EC2 instance that is directly communicating to another EC2 instance.
+=> While tight coupling is simpler from an architecture perspective, It doesn't offer any meaningful benefits over loose coupling.
+
+Some more exam tips ::
+
+=> Always loosely couple : Even when not specifically asked, loose coupling is answer.
+
+=> Never tightly couple : Don't select answers that include instance-to-instance communication
+
+=> Internal and External : Every level of an application should be loosely coupled
+
+=> One Size : Doesn't fit all. There's no one single decouple.

@@ -1,0 +1,47 @@
+SNS : Simple Notification Service. This is Push based messaging service.
+
+SNS Settings :
+
+=> Subscribers :
+    Kinesis Data Firehose, SQS, Lambda, Email, HTTP(s), SMS. platform application endpoint.
+
+=> Message Size :
+    Messages can be up to 256 KB of text in any format.
+
+=> DLQ Support :
+    Messages that fail to be delivered can be stored in an SQS DLQ. 
+    Exception : HTTP
+
+=> FIFO or Standard :
+    FIFO only supports SQS as a Subscribers
+
+=> Encryption :
+    Messages are encrypted in transit by default, but you can add at-rest.
+
+=> Access Policy :
+    A resource policy can be added to a topic, similar to S3.
+
+IMP : SNS is an important service, but when compared to SQS it won't as heavily featured on the exam.
+
+Exam Tips :
+
+=> Sending alerts in exam means using notification service SNS
+    Alerts = SNS
+
+=> You'll see SNS used in a veriety of solutions on the exam.
+
+=> Anytime you see a need for someone to know an AWS event happened, SNS will be the service to deliver that notification.
+
+Some more exam Tips
+
+=> Push : Anytime you see this word in exam, think of SNS
+
+=> Cloudwatch : SNS and Cloudwatch are best friends and the easiest way to alert you that something happened.
+
+=> Where does it go ? : you need to know all the subcribers optons
+
+=> Remember SES(Simple Email Service) is just a distractor and SES is just used to send marketing emails to client and not used for notifications
+    So if you see SES in options for sending out email notifications, never choose that. Go for SNS.
+
+=> No Do-Overs :
+    SNS will only retry HTTP(S) endpoints, but nothing else. Everything else will be sidelined to a SQS DLQ.

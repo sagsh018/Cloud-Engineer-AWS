@@ -1,0 +1,44 @@
+Exam Tips Final ::
+
+We need to ask 4 questions in the exam to ourself :
+
+=> Is it highly available ? :: Untill and unless it is explicitely mentioned that we do not need high availablity and concentrate more on cost, we have
+    to always choose option having high availibility.
+
+=> Which is appropriate for the situation : horizontal or vertical ? :: most of the time go with horizontal scaling untill it is explicitly mentioned 
+    in the question for ex : suppose question is asking to add extra networking capacity to the existing EC2 instance
+
+=> Is it cost effective ? :: Always choose a option in exam where cost is less.
+
+=> Would switching databases fix the problem ? :: If there is some kind of scenario where relation DB is having trouble and we need more performance
+    see if there is a option related to migration of databases let say from relation to non relation DB like DynamoDB. Alawys go with such options
+
+More Tips ::
+
+=> Auto Scaling is only for EC2 instances . No other service can be scaled using auto scaling. Other services might have it built-in option, but they 
+    aren't included in autoscaling groups.
+
+=> Get ahead of the workload. Whenever possible favor solutions that are predictive rather than reactive.
+
+=> Bake AMIs to reduce build times. You can avoid long provisioning times by putting everything in an AMI. This is better than using user data 
+    whenever possible.
+
+=> Spread out. Make sure you're spreading your auto scaling groups over multiple availability zones. 
+
+=> Steady state groups allow us to create a situation where the failure of a legacy codebase or resource that can't be scaled can automatically recover from 
+    failure
+
+=> ELSs are essential. Make sure you enable health checks from load balancers - otherwise, instances won't terminated and replaced when they fail health checks.
+
+=> Scaling Databases ::
+    > RDS has the most database scaling options
+    > Hosrizontal scaling is usually preferred over veritical 
+    > Read replicas are your friend
+    > Dynamo DB comes down to access pattern == AWS handles all scaling in case DynamoDB for us. If we have consistent access pattern, where its predictable, 
+        and we gradually need to scale up and scale to reads and writes back down, that's where we are going to select autoscaling method, provisioned capacity
+
+        But if we have unpredictable workloads, where access patterns just go and down and up and down and we can't really predict what we need, than we need
+        to pick that on demand option 
+
+        So when it comes to scale DynamoDB, its all about that access pattern
+        

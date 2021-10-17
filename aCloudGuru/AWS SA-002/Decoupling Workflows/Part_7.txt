@@ -1,0 +1,188 @@
+Hello, Cloud Gurus, and welcome back.
+In this lesson,
+we're going to be taking a look at some exam tips
+for all of those decoupling services
+that we just finished covering.
+So, let's go ahead and dive right on in.
+Now, I know what you're all wondering.
+Alex, what are the answers on the test?
+So, I'm prepared to tell you.
+They are A, C, B.
+Okay, I'm just kidding.
+Unfortunately, I can't make it that easy,
+but hopefully we can give you some questions
+to ask yourself to help simplify that exam-taking process.
+Now, the very first question --
+is it synchronous or asynchronous?
+The question will generally lay out
+which kind of workload we're using in this example scenario.
+If it's talking about that situation
+where we want to process those orders,
+where we want to be able to scale that backend architecture,
+based on the amount of load coming in,
+and we don't need that active connection,
+we might want to be thinking SQS queues.
+If it's talking about that frontend of our application,
+where we need those direct connections to our EC2 instances,
+that's where we might want to think about those ELBs.
+So while we do want to decouple everywhere,
+there is no no one perfect solution that I can just say,
+"Oh, use this every time."
+We really have to think synchronous or asynchronous.
+What type of decoupling makes sense?
+Is it those load balancers?
+Is it those SQS queues?
+Put on your logical thinking hat here.
+If we're at a position where I don't want to process
+all of that content at the exact same time,
+and it's okay if there's a little bit of delay,
+use those messaging queues.
+If I need to take one message coming in and fan it out,
+like we saw in that previous SNS demo,
+I might want to set up SNS to SQS to duplicate that workload
+so each backend can pull in the message whenever it's ready.
+This is where that whiteboard,
+if you're taking the exam digitally
+or that scratch paper can come in handy.
+I like to draw myself a nice little diagram
+of the existing architecture that's laid out in the scenario
+with just a few quick boxes
+and then think, "How can I decouple this
+"and what tool makes sense?"
+Having that visual overview can help lead me
+to the right answer.
+Does the order of that message or that work matter?
+If it does, how are we ensuring that order?
+If it doesn't, am I focusing on costs?
+Is there another constraint?
+Do I need to care about deduplication,
+or is it just a free for all as those messages go through?
+And that really drives home SQS Standard versus SQS FIFO.
+What type of application load will you see?
+This is going to play into decoupling
+as well as scaling that architecture out.
+Is part of decoupling increasing or decreasing
+the amount of instances or resources I have available
+to handle that workload?
+What would be that scaling notification?
+If you recall back to that previous SQS lesson,
+we talked about scaling our instance counts
+based on the depth of those messaging cues.
+A few more things to keep in mind here
+for SQS as we go through that test:
+SQS can duplicate messages.
+It does happen.
+However, on the exam you might see troubleshooting questions
+that say they're consistently duplicated messages.
+Like every single one.
+In that case, it's probably not SQS doing it.
+It's most likely a misconfigured visibility timeout
+where I'm not finishing processing the content
+before it pops back up in the queue
+and another instance can download it.
+Another situation I've seen
+is when that developer
+or the application is failing to make that final call back
+to delete that message from the queue.
+So while that message duplication happens once in a while,
+just naturally by using the SQS service,
+it is not a consistent problem.
+And if it shows that it is in the scenario,
+that's where you got to put your troubleshooting hat on.
+SQS queues are not bidirectional,
+meaning your web servers
+will not be able to take return information
+through that queue from the backend instances.
+If you need to have that bidirectional communication,
+you're going to have to have two SQS queues set up,
+one queue going each direction.
+That's a stumbling block that I've seen show up
+on the exam a few times.
+Know the defaults.
+You need to know all of those SQS settings
+that we talked about.
+What is the standard value?
+And then what would happen
+if we changed that standard value?
+For example, we talked about that message duplication
+with the default visibility time app.
+If you set the maximum message size to 128 kilobytes,
+you won't be able to send those 256 kilobyte messages.
+Nothing lasts forever.
+Now in the SQS world,
+that means data can only live in those queues up to 14 days.
+After that, it's deleted.
+Remember that four days is the default value as well.
+I have seen scenarios where they talk about,
+oh, a developer made a code change
+and went on vacation for 15 days.
+And then when they got back,
+they noticed that none of their messages
+were being processed.
+And you should immediately start thinking,
+"Okay, any messages past that 14 day window have been lost."
+Does order matter?
+If it does, think FIFO.
+Now, you might run into a situation where
+FIFO is not an answer,
+even though it could solve the problem.
+In that case,
+you're going to want to think about including
+those ordering numbers in the messages themselves,
+and then the consumer of those messages
+will have to reassemble the order on its end.
+That's a little bit more work.
+It allows to use that cheaper SQS Standard queue.
+It's more likely, though,
+that FIFO will be the right answer.
+And when comparing head to head.
+we generally want to prefer the managed AWS tools
+as opposed to the DIY option,
+so FIFO should be our primary choice
+and that DIY option -- that's kind of the backup
+if FIFO was not presented as an answer.
+We have a few more points on SNS and that API Gateway.
+If it talks about any sort of proactive delivery,
+proactive notification -- email, text, push --
+think SNS.
+We talked about those use cases with SNS,
+those Cloud Watch alarms,
+and I also want to keep iterating this.
+Anytime we see proactive notification
+- push, email, text -- think SNS.
+We talked about those CloudWatch alarms.
+That's a big one.
+We talked about how we can use SNS to alert us
+when our architecture auto-scales.
+We also want to keep in mind using SNS
+to fan out those messages, like we saw in that demo,
+to our SQS queues.
+CloudWatch loves SNS.
+In the scenarios that you're going to see,
+think about using SNS to act as that notification tool
+whenever a CloudWatch alarm kicks off.
+In fact, if you need to know about anything happening
+inside of your AWS account,
+SNS is the tool that's going to deliver that message.
+API Gateway -- it doesn't really require
+an in-depth understanding,
+but you do need to know
+a few important points about it.
+It acts as a secure front door to handle
+that external communication coming into your environment.
+That's the biggest takeaway.
+If you see a scenario talking about creating
+or managing an API,
+look for answers that include API Gateway.
+The other thing that you want to keep in mind
+is that it supports the use of the Web Application Firewall
+to help prevent DDoS attacks.
+Now, if you're not familiar with that terminology,
+no worries! We will be defining that
+and talking about that Web Application Firewall
+in one of our upcoming security lessons.
+So, I promise we will get to that.
+All right, folks. Thanks for going through
+these decoupling lessons with me
+and reviewing those exam tips.
+I can't wait to see you in the next section.

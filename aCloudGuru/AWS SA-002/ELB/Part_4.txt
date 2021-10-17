@@ -1,0 +1,11 @@
+Classic Load Balancers
+
+=> A 504 error means that gateway has timed out.
+    This means the application is not responding within the idle timeout period
+
+=> Troubleshoot the application
+    Is it the web server or database server?
+
+=> Need the IPv4 address of your end user >
+    Look for the X-Forwarded-For header.
+

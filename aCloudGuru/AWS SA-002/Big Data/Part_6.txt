@@ -1,0 +1,8 @@
+Analyzing Data with Elasticsearch
+
+Exam Tips :
+
+    > If you're given a scenario on the exam that talks about creating a third-party logging solution, there's a good chance Elasticsearch will be involved.
+        Be on the lookout for an Elasticsearch, Logstash, Kibana (ELK) stack.
+
+        

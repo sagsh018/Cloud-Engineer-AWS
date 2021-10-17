@@ -1,0 +1,14 @@
+Network Load Balancers
+
+Use Cases ::
+
+=> Network load balancers are best suited for load balancing of TCP traffic where extreme performance is required. Operating at the connection level
+    (Layer 4), Network Load Balancers are capable of handling millions of requests per second, while maintaining ultra-low latencies.
+=> Use for extreme performance
+
+4 Tips ::
+
+=> Network load balancers are operate at layer 4
+=> use where you need extreme performance
+=> Other use cases are where you need protocols not supported by application load balancers. That means whereever ports other than 80 and 443 are supported.
+=> Network load balancers can decrypt traffic, but you will need to install the certificate on the load balancer.

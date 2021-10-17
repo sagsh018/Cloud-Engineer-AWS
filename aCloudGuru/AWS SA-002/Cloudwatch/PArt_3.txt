@@ -1,0 +1,32 @@
+4 questions to ask in the Exam ::
+
+=> What is the best tool to monitor with ? :: 9 out of 10 times it will be cloudwatch. but there are some limitations which we will later in the course
+
+=> Is that metric available by default ? :: So here we need to decide whether amazon would be able to look into this data itself, or is it something I need
+    to configure my self by installing cloudwatch agent
+
+=> Where can I find those logs ? :: So here we can say cloudwatch logs are enough. For just storing them we can use S3. but for realing time viewing and
+    processing we have different tools.
+
+=> Di need to adjust that alarm ? :: We can get the question to basically make that alarm fire more frequently or may be to decrease the frequecy of the 
+    alarm. So in this situation we need to think of So i need to adjust the alarm.
+
+What to know for the Exam ::
+
+=> Cloudwatch is the main tool for everything alarm related.
+
+=> Not everything should go through cloudwatch :: We will discuss some other tools in future, but AWS standards should be watched by AWS config.
+    For example, are my EC2 instances using approved AMI, this will be somthing very difficult to craft with Cloudwatch in AWS. but AWS config provide this
+    out of the box.
+
+=> Know your intervals :: The standard metric is delivered every 5 minutes, while detailed monitoring delivers data every 1 minute. 5 minute metric is free 
+    whereas 1 min metric comes with additional charges.
+    You need to make sure that, you souldn't set monitoring per 1 minute, where the data points are coming in every 5 min or so. This will never let your alarm
+    work properly. So you should know your interval.
+
+=> Cloudwatch Logs is the place for logs. Its important to know EC2, on-primises, RDS, Lambda, and cloudtrail can all integrate with this service.
+
+=> SQL ? think of cloudwatch logs insights. you don't have to know it in depth, but its a good idea to have high-level understanding of this service.
+
+=> Real time means Kinesis :: We will cover this service in our big data section, so avoid picking cloudwatch logs if it asks for areal-time logging service.
+    Cloudwatch logs are near realtime but not realtime.

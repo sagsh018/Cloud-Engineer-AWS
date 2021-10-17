@@ -1,0 +1,15 @@
+Exploring large Redshift Database
+
+=> Redshift won't be featured too much depth on the exam, but it's still good to know the basics
+
+=> Keep in mind it's for BI applications, it's relation, and it can store up to 16 PB of data.
+
+Some more exam tips :
+
+=> Not Standard : Make sure you don't use redshift in place of RDS 
+
+=> Relational : Redshift is a relational database.
+
+=> It's Big : Redshift can support a lot of data: up to 16 PB
+
+=> Redshift is not good for high availability

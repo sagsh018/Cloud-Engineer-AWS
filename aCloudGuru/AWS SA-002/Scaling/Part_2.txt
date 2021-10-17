@@ -1,0 +1,20 @@
+What makes up a template ?
+
+=> On the exam, it's critical to understand what goes into a launch template.
+    You need to know it includes the AMI, EC2 instance size, security group, and potentially networking information
+    Mind that if you specify the VPC information at the time of creation of template, it cannot be used in autoscaling group and can only be
+    used within itself for creation of new instances.
+
+    There is a option in console, if you switch it on, it will guide you wnat is required to use template in EC2 instance.
+
+Exam Tips
+
+=> Launch Templates : The most up-to-date and flexible way to create a template.
+
+=> Launch Configurations : The older version, It's not "wrong" to use them, but if possible, use templates.
+
+=> User Data : User data is included in the template or configuration.
+
+=> Change : Can be versioned. Configurations are immutable
+
+=> Networking : Configurations don't include networking information. Template could.

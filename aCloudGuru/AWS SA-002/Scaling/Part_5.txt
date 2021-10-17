@@ -1,0 +1,17 @@
+Scaling Relational Databases :
+
+=> Scaling vs. Refactoring ::
+    You will be given scenarios and, unless otherwise specified, refactoring and changing to DynamoDB is viable scaling choice.
+    It won't work that easy in the real world, but in the exam switching database types can solve the problem, if DynamoDB exist in the options.
+
+Other Tips ::
+
+Read Replicas : Read-heavy workloads = Read replicas.
+
+Careful with storage : RDS storage only scales up - it won't scale back down
+
+Verticle scaling : Don't shy away from this scaling types
+
+Multi-AZ : Unless its dev environment turn this on
+
+Aurora everthing : Whenever possible, use Aurora it the situation calls for a relational database.

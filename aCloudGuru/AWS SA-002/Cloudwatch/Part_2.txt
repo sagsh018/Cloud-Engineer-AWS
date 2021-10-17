@@ -1,0 +1,14 @@
+=> Logs should go to Cloudwatch logs, except for situation where we don't need to process them and we don't need to see them in real time then, they should go 
+    to straight s3. 
+
+=> So in exam, if question talks about only storing and no processing or real time viewing, then they can be shipped to s3.
+
+=> You need to have a high-level understanding of what servies act as a source for cloudwatch logs. for example : EC2 , lambda, cloudtrail, RDS, on-prim and many 
+    more are all source for the cloudwatch logs
+    
+Exam Tips ::
+
+=> Do-to Tool :: Generally, favor cloudwatch logs, unless the exam asks for a real time solution
+=> Alarms :: Cloudwatch alarms can be used to alert if the filter patterns are found
+=> Agent based :: The cloudwatch agent must be installed and configured. Its not automatic
+=> SQL :: If the exam mentions SQL, think cloudwatch logs insights

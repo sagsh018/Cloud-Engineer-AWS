@@ -1,0 +1,62 @@
+Removing servers with Fargate 
+=============================
+
+=> AWS Fargate is a serverless compute engine for containers that works with both Amazon Elastic Containers Service (ECS) and Amazon Elastic Kubernetes Service (EKS).
+
+=> AWS owns and manages infrastructure
+
+=> Requires use of ECS or EKS
+
+=> Linux only workloads.
+
+EC2 vs Fargate 
+===============
+
+EC2 :
+
+    => You are responsible for underlying outside
+    => EC2 pricing model
+    => Long-running containers
+    => Multiple container share the same host
+
+Fargate :
+
+    => No OS access
+    => Pay based on resource allocated and time ran
+    => Short running tasks
+    => Isolated environments
+
+How does lambda compares ?
+
+Fargate :
+
+    => Select Fargate when you have more consistent workloads
+    => Allows Docker use across the organization and a greater level of control by developers
+
+Lambda :
+
+    => Great for unpredictable or inconsistent workloads
+    => Perfect for applications that can be expressed as a single function.
+
+Exam Tips 
+=========
+
+=> Know the use cases 
+
+=> Your best friend in the exam is knowing when to use lambda vs. Fargate vs EC2
+
+=> Lambda is for light weight functions. Easily integrate with our other AWS services
+
+=> Fargate is when I have containers that do not need to run all the time
+
+=> EC2 is for when I have container that need to run 24*7 365 days a year.
+
+Some more exam tips :
+
+=> Lose the servces : Fargate is a serverless compute option
+
+=> Required Tools : ECS or EKS is a requirement. Fargate doesn't work by itself
+
+=> Fargate vs EC2 : Fargate is more expensive, but easier to use
+
+=> Fargate vs Lambda : Fargate is for containers and applications that need to run longer. Lambda excels at short and simple functions.

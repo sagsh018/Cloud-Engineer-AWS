@@ -1,0 +1,35 @@
+Running Containers in ECS or EKS
+=================================
+
+Why ECS ?
+==========
+
+=> Management of containers at scale : ECS can manage 1, 10, hundreds or thousands of containers. It will appropriately place the containers and keep them online.
+
+=> Role Integration : Containers can have individual roles attached to them, making security a breeze
+
+=> ELB Integration : Containers are appropriately registered with the load balancers as they come online and go offline.
+
+=> Ease of Use : Extreamely easy to set up and scale to handle any workload.
+
+Exam Tips :
+
+=> ECS is preferred over EKS
+
+=> ECS and container go hand in hand on the exam.
+
+=> If you see containers mentioned, you should think ECS
+
+=> The only exception to this is if the question is asking about open source, kubernetes, or running the container on premises. In that situation, you'd want to select EKS.
+
+Some more exam tips :
+
+=> ECS vs EKS
+
+=> Preference : Generally, favor using AWS designed services over third party
+
+=> Open source : Anytime you see open source or kubernetes, think EKS
+
+=> High level : The exam won't ask the specifics of ECS or EKS usage
+
+=> Length : Great for one-off or long-running applications.

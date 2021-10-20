@@ -1,0 +1,8 @@
+Serverless Overview
+====================
+
+=> Let's go Serverless
+
+=> On the exam focus on answers that move away from unmanaged architecture like ec2
+
+=> It's almost always better to select an answer on the text that uses lambda or containers rather than traditonal operating system.

@@ -1,0 +1,18 @@
+Container Overview
+===================
+
+=> Containers are more flexible 
+
+=> On the exam, containers are generally seen as more flexible.
+
+=> They're easier to run on-site and move around to different environments.
+
+=> If you see scenario that talks about any of these situations, pick an answer that includes containers.
+
+Some more exam tips :
+
+=> High Level : you won't have to dive into the specifics of a Dockerfile
+
+=> Ease of Use : Containers help you easily migrate from on-premise to AWS.
+
+=> Dev vs. Prod : Dev is prod and prod is dev (but it's good thing with containers.)

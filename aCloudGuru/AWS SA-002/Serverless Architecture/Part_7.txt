@@ -1,0 +1,199 @@
+Serverless Architecture Exam Tips
+=================================
+
+Hello Cloud Gurus,
+and welcome back.
+In this lesson,
+we're going to wrap up our conversations
+around serverless architecture
+with some final exam tips for you.
+So let's go ahead and dive right on it.
+Now, of course,
+I've got the four questions
+that I want you to keep in mind
+for every single scenario
+that's given to you on the exam.
+The first question is,
+is the application being described to you
+right for containers?
+Remember, the containers are those immutable resources.
+I fill the container up with all of my code,
+all of my dependencies,
+all of my packages,
+and then I can pick that container up
+and move it anywhere that I want.
+So I need to really focus on using containers
+with microservices,
+with small, flexible applications.
+If the scenario is talking about,
+well, that microservice,
+we should be thinking,
+how do I containerize it?
+If it's talking about that monolithic architecture,
+where we just need one giant server
+to run everything,
+then you probably want to avoid containers
+for that application.
+Do you need those servers?
+Do we have to have them?
+If possible, it's best to use a managed architecture.
+It's best to use Fargate, ECS,
+EKS, Lambda even.
+Some situations will require that host level access.
+And if it does,
+then we want to avoid serverless resources.
+But if it doesn't,
+or it's not specifically called out,
+favor situations that give you the ability
+to ditch those EC2 instances.
+Is the application AWS specific?
+Are we looking for a resource
+that has to run inside of AWS,
+or do we need that portability
+that a container can give us,
+so we can run inside of the cloud,
+and also on-premise?
+How long does the code have to run?
+Is it running for a minute,
+for an hour, for a year?
+We're going to need to be able to look at that
+and decide which serverless resource do we want to use,
+or do we want to use those standard EC2 instances?
+That's going to be a big theme here,
+knowing when do we use serverless
+versus when do we use standard resources.
+So a few more takeaway points here for Lambda,
+Lambda loves roles.
+Anytime you see a situation
+in which you're creating a Lambda function,
+ensure that you are selecting
+the appropriate role to attach to it.
+Sometimes the exam might lay out a situation
+where it talks about hard coding credentials
+inside of Lambda,
+that access key and secret key.
+If you ever see that,
+you want to avoid that answer.
+We always, always, always want
+to attach a role to Lambda
+to make our permissions
+just a little bit easier to manage.
+Know what can kick off those Lambda functions.
+We talked about a few of these in that Lambda lesson:
+as S3, Kinesis, CloudWatch Events,
+also known as EventBridge.
+These are common tools that can kick Lambda off.
+API gateway is another big one.
+You don't have to memorize every single thing,
+but be able to place Lambda inside
+of a general architecture pattern,
+and understand the use cases of why each one
+of these services might want
+to kick off a Lambda function.
+Know those limits.
+Functions are designed to be short.
+We can have them up to those 10 gigs of RAM,
+and 15 minutes of runtime,
+but it is not possible
+to exceed either one of those numbers.
+Also keep in mind that that CPU scales out
+proportionate the amount of RAM that you've allocated.
+It's important to remember that any AWS API call
+can be a trigger to kick off an EventBridge rule.
+This means any event,
+anything that happens inside of your account
+can notify a Lambda function.
+This is a really powerful tool.
+That means you can basically build
+in your own features,
+your own AWS tweaks,
+as we'll call it.
+You want to make sure
+that all of your buckets are shut down immediately
+if they become publicly available?
+You can use a Lambda function
+and EventBridge to make that happen.
+You want to turn off all
+of your EC2 instances at midnight
+for whatever reason?
+You can use event bridge and Lambda
+to make this happen.
+For the exam, it's important to remember
+that using EventBridge/CloudWatch events
+is going to be faster than trying
+to scrape through CloudTrail
+and find an API call in there,
+because CloudTrail primarily focuses on auditing.
+Now, a few tips for those container questions
+that you might run into.
+If you see a question that's talking
+about anything open source,
+and it mentions containers,
+automatically think Kubernetes.
+Now, Kubernetes and AWS should also lead you
+to an answer that contains EKS.
+In general, we want to focus on managed solutions.
+So if given a scenario,
+you should pick using EKS
+over trying to spin up Kubernetes by yourself.
+We also want to keep in mind
+that Kubernetes works on-premise
+and inside of AWS.
+Sometimes you might see a scenario
+that talks about a cross-platform rollout,
+and know the ECS doesn't really support
+on premise and the cloud.
+It's really just for AWS.
+Fargate doesn't work alone.
+It needs ECS.
+It needs EKS.
+Like I mentioned earlier though,
+some situations we'll talk about Fargate
+like it's a service by itself.
+In that situation, don't panic.
+(chuckles)
+And don't be drawn in trying
+to think about ECS or EKS.
+Focus more on that serverless nature of that container.
+The question's probably gonna
+be asking you something along the lines of,
+would this be a good use case for our application?
+Would serverless work for the container
+that we've described?
+Containers are flexible.
+We can put anything we want
+or just about anything that we want
+into a container.
+Think of a container like those microservices.
+They're small, they're quick,
+they're fast, they're portable,
+they're immutable.
+Those are all things that we want to remember
+when we're looking at containers.
+Generally we should favor using a container
+over just deploying our application straight
+to EC2 instance,
+for all the reasons that I just mentioned.
+Now, the exam itself isn't going to dive
+too much into what's a Dockerfile,
+how do we build an image,
+appropriate tagging,
+repo management
+or anything like that.
+It's going to focus more on the application
+of containers inside of AWS,
+with ECS, EKS, and Fargate.
+So keep it pretty high level.
+It's good to have practice spinning that content up,
+but don't get bogged down trying
+to understand all the nuances of a Dockerfile,
+because that's just not going to be on the exam.
+It's better to focus on the application of containers
+and the benefits of migrating
+to ECS,
+EKS,
+or even getting rid of those servers with Fargate
+All right folks,
+thanks for going through these exam tips with me,
+and I can't wait to see you
+in the next lesson.

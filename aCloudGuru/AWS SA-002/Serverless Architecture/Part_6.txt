@@ -1,0 +1,41 @@
+Amazon Eventbridge
+
+=> Amazon Eventbridge (formerly known as cloudwatch events) is a serverless event bus. It allows you to pass events from a source to an endpoint.
+
+=> Creating a Rule :
+
+    => Define pattern
+        Do you want the rule to be invoked based on an event happening? or do you want to be scheduled?
+
+    => Select Event bus
+        Is this going to be an AWS based event ? A custom event ? or a partner ?
+
+    => Select your target 
+        What happens when this event kicks off ? Do you trigger a lambda function ? post to an SQS queue ? send an email ?
+
+    => Tag 
+        It can't be stressed enough : you need to tag everything
+
+    => Sit back
+        wait for the event to happen. or kick off yourself to make sure it's working correctly.
+
+Exam tips :
+
+=> Eventbridge is a Glue
+
+=> Do you want to trigger an action based on something that happened in AWS ? 
+
+=> Eventbridge can do that for you
+
+=> Eventbridge holds together a serverless application and lambda function. Any API call that happens in AWS can alert a lambda function, or a variety of different endpoints, that something 
+    has happened.
+
+Some more exam tips :
+
+=> API calls : A very common use case is triggering a lambda functions when a AWS API call happens.
+
+=> New vs Old : Eventbridge is the new name, but you might see cloudwatch events on the exam
+
+=> High level : there's more to eventbridge than rules, but it won't be on the exam
+
+=> Speed : this is the fastest way to respond to things happening in your environment

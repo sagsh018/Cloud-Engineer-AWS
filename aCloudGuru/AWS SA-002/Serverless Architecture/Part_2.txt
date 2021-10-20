@@ -1,0 +1,23 @@
+Computing with lambda
+======================
+
+Exam Tips :
+
+=> Lambda is the answer : One of the most common ways you're going to see lambda used is to add features to AWS.
+
+=> If you need to automatically remove entries from a security group, start and stop instances, or do anything else that isn't built in, the answer is most likely going to be use lambda 
+    to achieve that.
+
+=> It is most commonly used in cases where we migrate small micro services into AWS.
+
+Some more exam tips :
+
+=> Limitations : know the limitations and general use cases for the service.
+
+=> How does it start ? : It's good to know the common triggers for lambda
+
+=> Microservices : Lambda excels in running small and lightweight functions.
+
+=> Ecosystem : Lambda plays a major role in AWS ecosystem. It's easily integrated with many services.
+
+=> Networking : Lambda can run inside or outside a VPC.
